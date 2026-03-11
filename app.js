@@ -32,7 +32,7 @@ const titleInput = document.getElementById("title");
 const messageInput = document.getElementById("message");
 const backFromNotifyButton = document.getElementById("back-from-notify");
 
-serverUrlInput.value = localStorage.getItem(storageKeys.serverUrl) || "https://competition.novadevlegrand.fr";
+serverUrlInput.value = localStorage.getItem(storageKeys.serverUrl) || "https://apprsk-server.onrender.com";
 
 adminLoginForm.addEventListener("submit", onAdminLogin);
 goTeamCreateButton.addEventListener("click", () => showPage("teamCreate"));
