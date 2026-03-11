@@ -10,9 +10,3 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.11
-      - key: APP_DATA_DIR
-        value: /var/data
-    disk:
-      name: apprsk-data
-      mountPath: /var/data
-      sizeGB: 1
