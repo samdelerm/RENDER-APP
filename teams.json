@@ -1,0 +1,17 @@
+[
+  {
+    "code": "team-a",
+    "displayName": "Equipe A",
+    "password": "1234"
+  },
+  {
+    "code": "team-b",
+    "displayName": "Equipe B",
+    "password": "1234"
+  },
+  {
+    "code": "team-c",
+    "displayName": "Equipe C",
+    "password": "1234"
+  }
+]

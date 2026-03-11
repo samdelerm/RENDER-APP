@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RSK Python Server</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <main class="layout">
+        <section class="panel">
+            <p class="eyebrow">Serveur Python</p>
+            <h1>RSK Notifications</h1>
+            <p class="intro">Interface admin en 4 pages: login, menu, creation d'equipe, envoi de notifications.</p>
+
+            <section id="page-login" class="page">
+                <h2>1. Login Admin</h2>
+                <form id="admin-login-form" class="stack">
+                    <label>
+                        URL serveur
+                        <input id="serverUrl" placeholder="https://competition.novadevlegrand.fr" required>
+                    </label>
+                    <label>
+                        Nom admin
+                        <input id="adminUsername" value="admin" required>
+                    </label>
+                    <label>
+                        Mot de passe admin
+                        <input id="adminPassword" type="password" placeholder="admin123" required>
+                    </label>
+                    <button type="submit">Connexion admin</button>
+                </form>
+            </section>
+
+            <section id="page-menu" class="page hidden">
+                <h2>2. Menu</h2>
+                <div class="stack">
+                    <button id="go-team-create" type="button">Creer une equipe</button>
+                    <button id="go-notify" type="button">Envoyer une notification</button>
+                    <button id="logout" type="button" class="secondary">Se deconnecter</button>
+                </div>
+            </section>
+
+            <section id="page-team-create" class="page hidden">
+                <h2>3. Creation d'equipe</h2>
+                <form id="team-create-form" class="stack">
+                    <label>
+                        Code equipe
+                        <input id="newTeamCode" placeholder="team-d" required>
+                    </label>
+                    <label>
+                        Nom affiche
+                        <input id="newTeamDisplay" placeholder="Equipe D" required>
+                    </label>
+                    <label>
+                        Mot de passe equipe
+                        <input id="newTeamPassword" type="password" required>
+                    </label>
+                    <div class="actions">
+                        <button type="button" id="back-from-team" class="secondary">Retour menu</button>
+                        <button type="submit">Creer</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="page-notify" class="page hidden">
+                <h2>4. Envoi des notifications</h2>
+                <form id="notify-form" class="stack">
+                    <label>
+                        Equipe
+                        <select id="teamCode" required></select>
+                    </label>
+                    <label>
+                        Titre
+                        <input id="title" placeholder="Message arbitre" required>
+                    </label>
+                    <label>
+                        Message
+                        <textarea id="message" rows="5" placeholder="Le match commence dans 5 minutes." required></textarea>
+                    </label>
+                    <div class="actions">
+                        <button type="button" id="back-from-notify" class="secondary">Retour menu</button>
+                        <button type="submit">Envoyer</button>
+                    </div>
+                </form>
+            </section>
+
+            <p id="status" class="status">Pret.</p>
+        </section>
+    </main>
+    <script src="/app.js"></script>
+</body>
+</html>

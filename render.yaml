@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: apprsk-server
+    env: python
+    plan: free
+    rootDir: .
+    buildCommand: pip install -r StaticServer/requirements.txt
+    startCommand: gunicorn --chdir StaticServer app:app --bind 0.0.0.0:$PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: APP_DATA_DIR
+        value: /var/data
+    disks:
+      - name: apprsk-data
+        mountPath: /var/data
+        sizeGB: 1
