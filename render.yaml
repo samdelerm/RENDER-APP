@@ -12,7 +12,7 @@ services:
         value: 3.11.11
       - key: APP_DATA_DIR
         value: /var/data
-    disks:
-      - name: apprsk-data
-        mountPath: /var/data
-        sizeGB: 1
+    disk:
+      name: apprsk-data
+      mountPath: /var/data
+      sizeGB: 1
